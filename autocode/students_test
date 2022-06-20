@@ -9,7 +9,8 @@ import (
 )
 
 const (
-	UnexpectedError = "Unexpected error `%s`"
+	UnexpectedError    = "Unexpected error `%s`"
+	ExpectedValueError = "Expected %d at position [%d][%d], got %d"
 )
 
 // DO NOT EDIT THIS FUNCTION
@@ -228,7 +229,7 @@ func Test_MatrixRows(t *testing.T) {
 			for i, cols := range testCase.data {
 				for j, expected := range cols {
 					if rows[i][j] != expected {
-						t.Errorf("Expected %d at position [%d][%d], got %d", expected, i, j, rows[i][j])
+						t.Errorf(ExpectedValueError, expected, i, j, rows[i][j])
 					}
 				}
 			}
@@ -266,7 +267,7 @@ func Test_MatrixCols(t *testing.T) {
 			for i, cols := range testCase.data {
 				for j, expected := range cols {
 					if rows[i][j] != expected {
-						t.Errorf("Expected %d at position [%d][%d], got %d", expected, i, j, rows[i][j])
+						t.Errorf(ExpectedValueError, expected, i, j, rows[i][j])
 					}
 				}
 			}
@@ -334,7 +335,7 @@ func Test_MatrixSet(t *testing.T) {
 				rows := m.Rows()
 
 				if rows[testCase.row][testCase.col] != testCase.value {
-					t.Errorf("Expected %d at position [%d][%d], got %d", testCase.value, testCase.row, testCase.col, rows[testCase.row][testCase.col])
+					t.Errorf(ExpectedValueError, testCase.value, testCase.row, testCase.col, rows[testCase.row][testCase.col])
 				}
 			}
 		})
