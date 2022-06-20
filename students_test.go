@@ -30,7 +30,7 @@ func Test_PeopleLen(t *testing.T) {
 	}
 
 	for i, testCase := range testCases {
-		t.Run(fmt.Sprintf("test_%d", i), func (t *testing.T)  {
+		t.Run(fmt.Sprintf("Test_PeopleLen_%d", i), func (t *testing.T)  {
 			people := People{}
 
 			for _, person := range testCase.persons {
@@ -85,7 +85,7 @@ func Test_PeopleLess(t *testing.T) {
 	}
 
 	for i, testCase := range testCases {
-		t.Run(fmt.Sprintf("test_%d", i), func (t *testing.T)  {
+		t.Run(fmt.Sprintf("Test_PeopleLess_%d", i), func (t *testing.T)  {
 			people := People{}
 
 			for _, person := range testCase.persons {
@@ -116,7 +116,7 @@ func Test_PeopleSwap(t *testing.T) {
 	}
 
 	for i, testCase := range testCases {
-		t.Run(fmt.Sprintf("test_%d", i), func (t *testing.T)  {
+		t.Run(fmt.Sprintf("Test_PeopleSwap_%d", i), func (t *testing.T)  {
 			people := People{}
 
 			for _, person := range testCase.persons {
@@ -157,7 +157,7 @@ func Test_NewMatrix(t *testing.T) {
 	}
 
 	for i, testCase := range testCases {
-		t.Run(fmt.Sprintf("test_%d", i), func (t *testing.T)  {
+		t.Run(fmt.Sprintf("Test_NewMatrix_%d", i), func (t *testing.T)  {
 			m, err := New(testCase.matrix)
 			if testCase.err != nil {
 				if err == nil {
@@ -210,7 +210,7 @@ func Test_MatrixRows(t *testing.T) {
 	}
 
 	for i, testCase := range testCases {
-		t.Run(fmt.Sprintf("test_%d", i), func (t *testing.T)  {
+		t.Run(fmt.Sprintf("Test_MatrixRows_%d", i), func (t *testing.T)  {
 			m, err := New(testCase.matrix)
 			
 			if err != nil {
@@ -248,7 +248,7 @@ func Test_MatrixCols(t *testing.T) {
 	}
 
 	for i, testCase := range testCases {
-		t.Run(fmt.Sprintf("test_%d", i), func (t *testing.T)  {
+		t.Run(fmt.Sprintf("Test_MatrixCols_%d", i), func (t *testing.T)  {
 			m, err := New(testCase.matrix)
 			
 			if err != nil {
@@ -308,7 +308,7 @@ func Test_MatrixSet(t *testing.T) {
 	}
 
 	for i, testCase := range testCases {
-		t.Run(fmt.Sprintf("test_%d", i), func (t *testing.T)  {
+		t.Run(fmt.Sprintf("Test_MatrixSet_%d", i), func (t *testing.T)  {
 			m, err := New(testCase.matrix)
 			
 			if err != nil {
